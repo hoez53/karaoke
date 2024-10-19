@@ -16,54 +16,39 @@
       <p class="text-xl mt-3">Search for your favorite karaoke videos and sing along!</p>
     </header>
 
-    <!-- Login Form -->
-    <div class="flex justify-center mb-12">
+    <div class="flex justify-center mb-8">
+      <button id="login-tab" class="px-4 py-2 bg-green-500 text-white rounded-l">Log In</button>
+      <button id="register-tab" class="px-4 py-2 bg-gray-600 text-white rounded-r">Register</button>
+    </div>
+
+    <div id="login-form-container" class="flex justify-center mb-12">
       <form id="login-form" class="w-full max-w-sm">
         <div class="flex mb-4">
-          <input 
-            type="text" 
-            id="username" 
-            placeholder="Username" 
-            class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-          <input 
-            type="password" 
-            id="password" 
-            placeholder="Password" 
-            class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-r focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
+          <input type="text" id="login-username" placeholder="Username" class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-green-400"/>
+          <input type="password" id="login-password" placeholder="Password" class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-r focus:outline-none focus:ring-2 focus:ring-green-400"/>
         </div>
-        <button 
-          type="button" 
-          id="login-btn" 
-          class="w-full bg-green-500 hover:bg-green-400 text-white py-2 px-4 rounded transition"
-        >
-          Log In
-        </button>
+        <button type="button" id="login-btn" class="w-full bg-green-500 hover:bg-green-400 text-white py-2 px-4 rounded transition">Log In</button>
       </form>
     </div>
 
-    <!-- Search Bar -->
-    <div class="flex justify-center mb-8">
-      <input 
-        type="text" 
-        id="search-input" 
-        class="w-2/3 md:w-1/2 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400" 
-        placeholder="Search for Karaoke Songs..." 
-      />
-      <button 
-        id="search-btn" 
-        class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-r transition"
-      >
-        Search
-      </button>
+    <div id="register-form-container" class="flex justify-center mb-12 hidden">
+      <form id="register-form" class="w-full max-w-sm">
+        <div class="flex mb-4">
+          <input type="text" id="register-username" placeholder="Username" class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+          <input type="password" id="register-password" placeholder="Password" class="flex-1 p-3 bg-black text-gray-300 border border-gray-600 rounded-r focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+        </div>
+        <button type="button" id="register-btn" class="w-full bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded transition">Register</button>
+      </form>
     </div>
 
-    <!-- Video Results Grid -->
-    <div 
-      id="video-results" 
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-    ></div>
+    <div class="flex justify-center mb-8">
+      <input type="text" id="search-input" class="w-2/3 md:w-1/2 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Search for Karaoke Songs..."/>
+      <button id="search-btn" class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-r transition">Search</button>
+    </div>
+
+    <div id="video-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
