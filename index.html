@@ -16,11 +16,13 @@
       <p class="text-xl mt-3">Search for your favorite karaoke videos and sing along!</p>
     </header>
 
+    <!-- Tabs for Login and Registration -->
     <div class="flex justify-center mb-8">
       <button id="login-tab" class="px-4 py-2 bg-green-500 text-white rounded-l">Log In</button>
       <button id="register-tab" class="px-4 py-2 bg-gray-600 text-white rounded-r">Register</button>
     </div>
 
+    <!-- Login Form -->
     <div id="login-form-container" class="flex justify-center mb-12">
       <form id="login-form" class="w-full max-w-sm">
         <div class="flex mb-4">
@@ -31,6 +33,7 @@
       </form>
     </div>
 
+    <!-- Registration Form -->
     <div id="register-form-container" class="flex justify-center mb-12 hidden">
       <form id="register-form" class="w-full max-w-sm">
         <div class="flex mb-4">
@@ -41,12 +44,14 @@
       </form>
     </div>
 
-    <div class="flex justify-center mb-8">
-      <input type="text" id="search-input" class="w-2/3 md:w-1/2 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Search for Karaoke Songs..."/>
-      <button id="search-btn" class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-r transition">Search</button>
+    <!-- Search Bar and Video Results (Hidden Initially) -->
+    <div id="content" class="hidden">
+      <div class="flex justify-center mb-8">
+        <input type="text" id="search-input" class="w-2/3 md:w-1/2 p-3 bg-black text-gray-300 border border-gray-600 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Search for Karaoke Songs..."/>
+        <button id="search-btn" class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-r transition">Search</button>
+      </div>
+      <div id="video-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
     </div>
-
-    <div id="video-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
   </div>
 
   <script src="script.js"></script>
