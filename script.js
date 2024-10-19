@@ -1,5 +1,5 @@
 const API_KEY = 'AIzaSyAbHeWC_oUp7DUisor9O7hZ5tgRbgb2zVU';
-const BACKEND_URL = 'https://karaoke-backend-your-repl-url.repl.co'; // Replace with actual Replit backend URL
+const BACKEND_URL = 'https://74376f10-b037-480f-a9fd-80eef98f12f0-00-2uf6ippqjdnsy.sisko.replit.dev/'; // Replace with actual Replit backend URL
 
 document.getElementById('search-btn').addEventListener('click', async () => {
   const query = document.getElementById('search-input').value;
