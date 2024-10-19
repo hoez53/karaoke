@@ -1,6 +1,16 @@
 const API_KEY = 'AIzaSyAbHeWC_oUp7DUisor9O7hZ5tgRbgb2zVU';
 const BACKEND_URL = 'https://74376f10-b037-480f-a9fd-80eef98f12f0-00-2uf6ippqjdnsy.sisko.replit.dev/';
 
+// Show content only if the user is authenticated
+function checkAuth() {
+  const token = localStorage.getItem('token');
+  if (token) {
+    document.getElementById('content').classList.remove('hidden');
+    document.getElementById('login-form-container').classList.add('hidden');
+    document.getElementById('register-form-container').classList.add('hidden');
+  }
+}
+
 // Switch between login and registration forms
 document.getElementById('login-tab').addEventListener('click', () => {
   document.getElementById('login-form-container').classList.remove('hidden');
@@ -27,6 +37,7 @@ document.getElementById('login-btn').addEventListener('click', async () => {
   if (data.success) {
     localStorage.setItem('token', data.token);
     alert('Login successful!');
+    checkAuth();
   } else {
     alert('Invalid credentials.');
   }
@@ -77,3 +88,6 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     resultsDiv.innerHTML += videoCard;
   });
 });
+
+// Check authentication on page load
+checkAuth();
