@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyAbHeWC_oUp7DUisor9O7hZ5tgRbgb2zVU';  // Replace with your YouTube API Key
+const API_KEY = 'IzaSyAbHeWC_oUp7DUisor9O7hZ5tgRbgb2zVU';  // Replace with your YouTube API Key
 const BACKEND_URL = 'https://74376f10-b037-480f-a9fd-80eef98f12f0-00-2uf6ippqjdnsy.sisko.replit.dev/'; // Replace with your Repl backend URL
 
 // Function to search for karaoke videos using YouTube API
